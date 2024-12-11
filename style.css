@@ -1,0 +1,31 @@
+/* varaibles */
+:root {
+  --error-color: #ff6666;
+  --success-color: #66ff97;
+  --primary-color: #7a6f62;
+  --text-color: #ffffff;
+  --secondary-color: #d19a69;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.quiz {
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+}
+
+.btn {
+  border: 1px solid grey;
+  color: var(--text-color);
+}
+
+.btn:hover {
+  border: 1px solid lightgrey;
+}
+
+#next-btn {
+  background-color: var(--secondary-color);
+}
