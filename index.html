@@ -13,17 +13,57 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container py-5">
+    <!-- Instruction page -->
+    <div id="instruction-page" class="container py-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
-          <h1 class="text-center mb-4">Quiz</h1>
-          <div class="quiz p-4">
-            <h3 id="question" class="mb-4">Question goes here</h3>
-            <div id="answer-area" class="d-grid gap-3">
-              <!-- Dynamic answer buttons or inputs will be inserted here -->
-            </div>
-            <div class="mt-4 text-end">
-              <button id="next-btn" class="btn">Next</button>
+          <h1 class="text-center mb-4">Welcome to the Quiz!</h1>
+          <p class="instruction-text text-center">
+            Thank you for participating. Here’s what you need to know:
+          </p>
+          <ul class="instruction-list p-5">
+            <li>
+              Answer all questions carefully. Each question appears one at a
+              time.
+            </li>
+            <li>
+              You will see different types of questions, such as
+              multiple-choice, true/false, and fill-in-the-blank.
+            </li>
+            <li>The quiz consists of 15 questions.</li>
+            <li>You will see a summary of your answers at the end.</li>
+          </ul>
+          <p class="good-luck-message text-center">
+            Good luck and enjoy the quiz!
+          </p>
+
+          <div class="text-center mt-4">
+            <button id="start-quiz-btn" class="btn btn-primary">
+              Start Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz -->
+    <p class="reminder text-center mt-3">
+      If the quiz gets stuck at any question, please refresh the page and start
+      again.
+    </p>
+    <div id="quiz-page" class="d-none">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <h1 class="text-center mb-4">Quiz</h1>
+            <div class="quiz p-4">
+              <h3 id="question" class="mb-4">Question goes here</h3>
+              <div id="answer-area" class="d-grid gap-3">
+                <!-- Dynamic answer buttons or inputs will be inserted here -->
+              </div>
+              <div class="mt-4 text-end">
+                <button id="next-btn" class="btn">Next</button>
+              </div>
             </div>
           </div>
         </div>

@@ -1,15 +1,65 @@
 /* varaibles */
 :root {
+  /* colors */
   --error-color: #ff6666;
   --success-color: #66ff97;
   --primary-color: #7a6f62;
   --text-color: #ffffff;
   --secondary-color: #d19a69;
+  /* font sizes */
+  --font-size-xlarge: 2em; /* 32px */
+  --font-size-large: 1.5em; /* 24px */
+  --font-size-medium: 1.2em; /* 19px */
+  --font-size-small: 0.9em; /* 14px */
+  --font-size-extra-small: 0.8em; /* 12px */
 }
 
 body {
   background-color: var(--primary-color);
   color: var(--text-color);
+  font-size: var(--font-size-medium);
+}
+
+h1 {
+  font-size: var(--font-size-xlarge);
+}
+
+h3 {
+  font-size: var(--font-size-large);
+}
+
+.reminder {
+  font-size: var(--font-size-extra-small);
+  font-weight: 300;
+  color: lightgrey;
+  margin-top: 10px;
+}
+
+.instruction-text {
+  font-size: var(--font-size-medium);
+  margin-bottom: 15px;
+}
+
+.instruction-list {
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+}
+
+.instruction-list li {
+  font-size: var(--font-size-small);
+  margin-bottom: 10px;
+}
+
+.good-luck-message {
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+}
+
+#start-quiz-btn {
+  font-size: var(--font-size-medium);
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 
 .quiz {
@@ -81,10 +131,9 @@ body {
 
 /* feedback */
 .feedback {
-  font-size: 1.2em;
+  font-size: var(--font-size-medium);
   margin-top: 10px;
   text-align: center;
-  color: var(--text-color);
 }
 
 /* summary */
@@ -118,7 +167,7 @@ body {
 
 .user-answer,
 .correct-answer {
-  font-size: 0.9em;
+  font-size: var(--font-size-small);
 }
 
 .answer-correct {

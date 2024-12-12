@@ -1,3 +1,14 @@
+// Show instruction page first
+const instructionPage = document.getElementById("instruction-page");
+const quizPage = document.getElementById("quiz-page");
+const startQuizButton = document.getElementById("start-quiz-btn");
+
+// Hide instruction page and show quiz
+startQuizButton.addEventListener("click", () => {
+    instructionPage.classList.add("d-none");
+    quizPage.classList.remove("d-none");
+});
+
 const questionElement = document.getElementById("question");
 const answerArea = document.getElementById("answer-area");
 const nextButton = document.getElementById("next-btn");
