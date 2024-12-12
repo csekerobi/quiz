@@ -49,16 +49,20 @@ function resetState() {
 // Handle answer selection
 function selectAnswer(isTrue) {
     const correct = questions[currentQuestionIndex].correct;
+
     if (isTrue === correct) {
         score++;
-        trueButton.classList.add("correct");
-        falseButton.classList.add("incorrect");
+        const correctButton = isTrue ? trueButton : falseButton;
+        correctButton.classList.add("correct"); // Mark correct button green
     } else {
-        trueButton.classList.add("incorrect");
-        falseButton.classList.add("correct");
+        const selectedButton = isTrue ? trueButton : falseButton;
+        selectedButton.classList.add("incorrect"); // Mark incorrect button red
     }
+
+    // Disable both buttons
     trueButton.disabled = true;
     falseButton.disabled = true;
+
     nextButton.style.display = "inline-block";
 }
 

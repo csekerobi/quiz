@@ -31,13 +31,11 @@ body {
 }
 
 .btn.correct {
-  background-color: var(--success-color) !important;
-  color: var(--text-color);
+  background-color: var(--success-color);
 }
 
 .btn.incorrect {
-  background-color: var(--error-color) !important;
-  color: var(--text-color);
+  background-color: var(--error-color);
 }
 
 #true-false-buttons {
