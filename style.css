@@ -39,3 +39,9 @@ body {
   background-color: var(--error-color) !important;
   color: var(--text-color);
 }
+
+#true-false-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

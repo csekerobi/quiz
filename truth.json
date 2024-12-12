@@ -1,0 +1,8 @@
+[
+    { "question": "The sky is blue.", "correct": true },
+    { "question": "2 + 2 equals 5.", "correct": false },
+    { "question": "Cats are mammals.", "correct": true },
+    { "question": "The earth is flat.", "correct": false },
+    { "question": "Fire is cold.", "correct": false }
+  ]
+  
