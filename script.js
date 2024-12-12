@@ -69,7 +69,7 @@ function selectAnswer(e) {
         }
         button.disabled = true;
     });
-    nextButton.style.display = 'block'
+    nextButton.style.display = 'inline-block'
 }
 
 // Displays the final score and a play again button
@@ -77,7 +77,7 @@ function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again"
-    nextButton.style.display = "block"
+    nextButton.style.display = "inline-block"
 }
 
 // Handles the next button click to show the next question or final score
@@ -98,6 +98,3 @@ nextButton.addEventListener("click", ()=>{
         startQuiz();
     }
 })
-
-// Starts the quiz when the page loads
-startQuiz();
