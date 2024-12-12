@@ -1,50 +1,3 @@
-const questions = [
-    {
-        question: "What is the capital of France?",
-        answers: [
-            {text: "Madrid", correct: false},
-            {text: "Berlin", correct: false},
-            {text: "Paris", correct: true},
-            {text: "Rome", correct: false},
-        ]
-    },
-    {
-        question: "Which planet is known as the Red Planet?",
-        answers: [
-            {text: "Mars", correct: true},
-            {text: "Venus", correct: false},
-            {text: "Jupiter", correct: false},
-            {text: "Mercury", correct: false},
-        ]
-    },
-    {
-        question: "Who wrote the play Romeo and Juliet?",
-        answers: [
-            {text: "Charles Dickens", correct: false},
-            {text: "William Shakespeare", correct: true},
-            {text: "Jane Austen", correct: false},
-            {text: "Mark Twain", correct: false},
-        ]
-    },
-    {
-        question: "What is the chemical symbol for water?",
-        answers: [
-            {text: "CO2", correct: false},
-            {text: "H2O", correct: true},
-            {text: "NaCl", correct: false},
-            {text: "O2", correct: false},
-        ]
-    },
-    {
-        question: "Which continent is the Sahara Desert located in?",
-        answers: [
-            {text: "Asia", correct: false},
-            {text: "Africa", correct: true},
-            {text: "Australia", correct: false},
-            {text: "South America", correct: false},
-        ]
-    }
-];
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -52,6 +5,18 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+
+// Fetch questions from the JSON file
+async function loadQuestions() {
+    try {
+        const response = await fetch('questions.json');
+        questions = await response.json();
+        startQuiz();
+    } catch (error) {
+        console.error("Failed to load questions:", error);
+    }
+}
+loadQuestions();
 
 // Initializes the quiz, resets the score, and shows the first question
 function startQuiz() {
