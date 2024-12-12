@@ -86,3 +86,47 @@ body {
   text-align: center;
   color: var(--text-color);
 }
+
+/* summary */
+.summary {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+}
+
+.question-summary {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.question-summary:last-child {
+  border-bottom: none;
+}
+
+.question-text {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+}
+
+.answers-comparison {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.user-answer,
+.correct-answer {
+  font-size: 0.9em;
+}
+
+.answer-correct {
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+.answer-incorrect {
+  color: var(--error-color);
+  font-weight: bold;
+}
